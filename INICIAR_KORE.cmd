@@ -45,7 +45,17 @@ if errorlevel 1 (
 )
 
 echo.
-echo Iniciando a API...
+echo Compilando e iniciando a API...
 call npm.cmd run start:dev
+if errorlevel 1 (
+  echo.
+  echo A API nao conseguiu iniciar. Copie a mensagem acima e envie para o Alex.
+  pause
+  exit /b 1
+)
+
+echo.
+echo API encerrada.
+pause
 
 endlocal
