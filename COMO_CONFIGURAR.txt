@@ -1,0 +1,41 @@
+KORE FINANCE API - WEB MOBILE AULA 7
+
+1) MongoDB Atlas
+- Crie um cluster gratuito no MongoDB Atlas.
+- Crie um usuário e senha para o banco.
+- Em Network Access, libere o IP necessário para o teste.
+- Copie a string de conexão.
+
+2) Configurar a conexão
+Opção recomendada:
+- Defina a variável de ambiente MONGODB_URI com sua string do Atlas.
+
+Ou, somente para a entrega/teste local:
+- Abra src/app.module.ts e substitua a string de exemplo pela sua conexão.
+
+NUNCA publique usuário e senha reais do MongoDB em um repositório público.
+
+3) Executar
+npm install
+npm run start:dev
+
+API: http://localhost:3000
+POST: http://localhost:3000/transacoes
+GET:  http://localhost:3000/transacoes
+
+Exemplo de POST:
+{
+  "descricao": "Conta de Luz",
+  "valor": 180.50,
+  "tipo": "despesa",
+  "categoria": "Moradia",
+  "consumoConsciente": true
+}
+
+4) GitHub
+- Repositório público:
+https://github.com/maybederick/kore-finance-api
+
+5) Entrega
+O ZIP final deve conter SRC, TEST, package.json, tsconfig.json, nest-cli.json,
+github.txt e arquivos adicionais de configuração usados pelo projeto.
