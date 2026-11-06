@@ -1,24 +1,29 @@
 KORE FINANCE API - WEB MOBILE AULA 7
 
-1) MongoDB Atlas
-- Crie um cluster gratuito no MongoDB Atlas.
-- Crie um usuário e senha para o banco.
-- Em Network Access, libere o IP necessário para o teste.
-- Copie a string de conexão.
+CONFIGURACAO SIMPLIFICADA PARA WINDOWS
 
-2) Configurar a conexão
-Opção recomendada:
-- Defina a variável de ambiente MONGODB_URI com sua string do Atlas.
+1) SEGURANCA DO MONGODB ATLAS
+- Como uma senha apareceu em um print durante a configuracao, troque a senha do usuario koreuser no MongoDB Atlas antes de usar o projeto.
+- Para evitar problemas na URL, prefira uma senha forte formada por letras e numeros.
+- Em Network Access, confirme que seu IP atual esta liberado.
 
-Ou, somente para a entrega/teste local:
-- Abra src/app.module.ts e substitua a string de exemplo pela sua conexão.
+2) FORMA MAIS FACIL DE INICIAR
+- Extraia o projeto.
+- Clique duas vezes em INICIAR_KORE.cmd.
+- Na primeira execucao, o arquivo .env sera criado e aberto no Bloco de Notas.
+- Troque somente SUA_SENHA pela NOVA senha do usuario koreuser.
+- Salve e feche o Bloco de Notas.
+- O script executara npm.cmd install e npm.cmd run start:dev automaticamente.
 
-NUNCA publique usuário e senha reais do MongoDB em um repositório público.
+3) CONEXAO
+O arquivo .env deve conter:
+MONGODB_URI=mongodb+srv://koreuser:SUA_SENHA@korecluster.gazpojk.mongodb.net/kore_finance?retryWrites=true&w=majority
 
-3) Executar
-npm install
-npm run start:dev
+IMPORTANTE:
+- O arquivo .env esta no .gitignore e NAO deve ser enviado ao GitHub.
+- Nunca publique usuario e senha reais do MongoDB.
 
+4) ENDPOINTS
 API: http://localhost:3000
 POST: http://localhost:3000/transacoes
 GET:  http://localhost:3000/transacoes
@@ -32,10 +37,10 @@ Exemplo de POST:
   "consumoConsciente": true
 }
 
-4) GitHub
-- Repositório público:
+5) GITHUB
+Repositorio publico:
 https://github.com/maybederick/kore-finance-api
 
-5) Entrega
+6) ENTREGA
 O ZIP final deve conter SRC, TEST, package.json, tsconfig.json, nest-cli.json,
-github.txt e arquivos adicionais de configuração usados pelo projeto.
+github.txt e os arquivos adicionais de configuracao utilizados pelo projeto.
