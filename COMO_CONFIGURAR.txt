@@ -13,7 +13,8 @@ CONFIGURACAO SIMPLIFICADA PARA WINDOWS
 - Na primeira execucao, o arquivo .env sera criado e aberto no Bloco de Notas.
 - Troque somente SUA_SENHA pela NOVA senha do usuario koreuser.
 - Salve e feche o Bloco de Notas.
-- O script executara npm.cmd install e npm.cmd run start:dev automaticamente.
+- O script executara npm.cmd install, compilara o TypeScript diretamente e iniciara a API com Node.
+- O projeto nao depende do Nest CLI nem do webpack para iniciar.
 
 3) CONEXAO
 O arquivo .env deve conter:
